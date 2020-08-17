@@ -21,7 +21,10 @@ exports.createPages = async ({ graphql, actions }) => {
       allMarkdownRemark {
         edges {
           node {
-            excerpt  
+            excerpt 
+            frontmatter {
+                        title
+                        } 
             html
           }
         }
@@ -33,12 +36,12 @@ exports.createPages = async ({ graphql, actions }) => {
     
 
     createPage({
-      path: node.excerpt,
+      path: node.frontmatter.title,
       component: path.resolve(`./src/templates/blog-post.js`),
       context: {
         // Data passed to context is available
         // in page queries as GraphQL variables.
-        slug: node.excerpt,
+        slug: node.frontmatter.title,
       },
     })
   })

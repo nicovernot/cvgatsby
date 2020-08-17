@@ -28,7 +28,7 @@ export default function Home({ data }) {
         <Tween from={{ opacity: 0 }} duration={2}> 
          <div className="card text-center" style={{ margin: 20}} key={node.id}>
             <Link
-              to={node.excerpt}
+              to={node.frontmatter.title}
               css={css`
                 text-decoration: none;
                 color: inherit;
