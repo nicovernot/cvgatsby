@@ -12,19 +12,11 @@ export default function Home({ data }) {
     <Layout>
       <div>
           <br/>
-        <h1
-          css={css`
-            display: inline-block;
-            border-bottom: 1px solid;
-          `}
-        >
-        Compétences:
-        </h1>
-        <br/>
-<Link to="/competences?cat=Langages de programmation"  style={{padding: '1.5rem' }}>Langages de programmation</Link>
-<Link to="/competences?cat=Basses de données"  style={{margin: '1.5rem' }}>Basses de données</Link>
+
 {projs.map((proj)=>(
-<Link  to={proj.node.data.Name} style={{padding: '1.5rem' }}>{proj.node.data.Name}</Link>
+<div className="card col-md-12" style={{margin: 10}}>   
+    <Link  to={proj.node.data.Name} style={{padding: '1.5rem' }}>{proj.node.data.Name}</Link>
+</div>
 ))}    
 
       </div>

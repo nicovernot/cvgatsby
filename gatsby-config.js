@@ -37,7 +37,8 @@ module.exports = {
             {
           baseId: `app6feg4WgnosCylh`,
           tableName: `projets`,
-          tableView: `Grid view` // optional
+          tableView: `Grid view` ,// optional
+          mapping: { description: 'text/markdown' },
           // can leave off queryName, mapping or tableLinks if not needed
         }
         ]
