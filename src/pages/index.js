@@ -21,8 +21,8 @@ export default function Home({ data }) {
         Compétences:
         </h1>
         <br/>
-<Link to="/competances?cat=Langages de programmation"  style={{padding: '1.5rem' }}>Langages de programmation</Link>
-<Link to="/competances?cat=Basses de données"  style={{margin: '1.5rem' }}>Basses de données</Link>
+<Link to="/competences?cat=Langages de programmation"  style={{padding: '1.5rem' }}>Langages de programmation</Link>
+<Link to="/competences?cat=Basses de données"  style={{margin: '1.5rem' }}>Basses de données</Link>
     
         {data.allMarkdownRemark.edges.map(({ node }) => (
         <Reveal repeat>
