@@ -1,13 +1,13 @@
 import React from "react"
 import { css } from "@emotion/core"
 import { Link, graphql } from "gatsby"
-import { rhythm } from "../utils/typography"
 import Layout from "../components/layout"
-import { Reveal, Tween } from 'react-gsap'; 
+
 
 
 export default function Home({ data }) {
- console.log(data)
+    const projs = data.projs.edges
+    console.log(projs)
   return (
     <Layout>
       <div>
@@ -23,7 +23,9 @@ export default function Home({ data }) {
         <br/>
 <Link to="/competences?cat=Langages de programmation"  style={{padding: '1.5rem' }}>Langages de programmation</Link>
 <Link to="/competences?cat=Basses de données"  style={{margin: '1.5rem' }}>Basses de données</Link>
-    
+{projs.map((proj)=>(
+<Link  to={proj.node.data.Name} style={{padding: '1.5rem' }}>{proj.node.data.Name}</Link>
+))}    
 
       </div>
     </Layout>
