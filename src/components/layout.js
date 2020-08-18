@@ -9,8 +9,8 @@ export default function Layout({ children}) {
     <div className="application">
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>My Title</title>
-                <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+                <title>Nicolas Vernot</title>
+                <script src="https://kit.fontawesome.com/1c451dcf6c.js" crossorigin="anonymous"></script>
             </Helmet>
             <div style={{ margin: `3rem auto`, maxWidth: 650, padding: `0 1rem` }}>
       <header style={{ marginBottom: `1.5rem` }}>
