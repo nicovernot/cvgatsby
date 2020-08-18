@@ -2,6 +2,8 @@ module.exports = {
   
   plugins: [
     `gatsby-env-variables`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -9,14 +11,7 @@ module.exports = {
         path: `${__dirname}/src/pages/`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `data`,
-        path: `${__dirname}/src/data/`,
-        ignore: [`**/\.*`], // ignore files starting with a dot
-      },
-    },
+    
     {
       resolve: `gatsby-source-filesystem`,
       options: {
