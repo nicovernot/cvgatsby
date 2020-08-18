@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 export default function About({ data }) {
   return (
     <Layout>
+        <br/>
       <h1>About {data.site.siteMetadata.title}</h1>
       <p>
         We're the only site running on your computer dedicated to showing the
