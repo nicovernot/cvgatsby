@@ -3,7 +3,7 @@ import Layout from '../components/layout';
 import { Reveal, Tween } from 'react-gsap';
 const params = new URLSearchParams(document.location.search.substring(1));
 const param =params.get("cat"); 
-let boolparam =false
+let boolparam =true
 
 
 export default function competances({data}) {
@@ -45,8 +45,8 @@ export default function competances({data}) {
 };
 
 export const query = graphql`
-  query {
-    allAirtable{
+ query MyQuery {
+    allAirtable(filter:{table:{eq:"cv"}}){
         edges {
         node {
             data {

@@ -33,7 +33,9 @@ export default function Layout({ children}) {
     />
         </AniLink>
         <ul style={{ listStyle: `none`, float: `right` }}>
-   
+        <AniLink paintDrip color="beige" to="/competances" style={{padding: '1.5rem' }}>
+           Compétances
+        </AniLink>
         <AniLink paintDrip color="beige" to="/about" style={{padding: '1.5rem' }}>
            About
         </AniLink>
