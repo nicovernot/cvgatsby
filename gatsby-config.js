@@ -4,6 +4,7 @@ module.exports = {
     `gatsby-env-variables`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    `gatsby-remark-images`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -23,7 +24,7 @@ module.exports = {
     {
       resolve: `gatsby-source-airtable`,
       options: {
-        apiKey: `keynivecoR8YRU3rWxqIsyK`, // may instead specify via env, see below
+        apiKey: `keyR8YRU3rWxqIsyK`, // may instead specify via env, see below
         concurrency: 5, // default, see using markdown and attachments for more information
         tables: [
           {
@@ -32,7 +33,13 @@ module.exports = {
             tableView: `Grid view`, // optional
             mapping: { competances: 'text/markdown' },
             tableLinks: [`projets`,'cat'],
-            }
+            },
+            {
+          baseId: `app6feg4WgnosCylh`,
+          tableName: `projets`,
+          tableView: `Grid view` // optional
+          // can leave off queryName, mapping or tableLinks if not needed
+        }
         ]
       }
     },
@@ -48,7 +55,14 @@ module.exports = {
         // GitHub Flavored Markdown mode (default: true)
         gfm: true,
         // Plugins configs
-        plugins: [],
+        plugins: [
+              {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+            },
+          },
+        ],
       },
     },
     `gatsby-plugin-emotion`,

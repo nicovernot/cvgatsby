@@ -19,7 +19,7 @@ export default function competances({data}) {
     return (
       <Layout>
           <br/>
-           { param ? "param":"pas param"}
+        
           <div className="container-fluid">
                 { filterdata.map((node,key) => (
          <div key={key} className="row">

@@ -42,34 +42,33 @@ exports.createPages = async ({ graphql, actions }) => {
   }
   `)
 
-  const result = await graphql(`
-    query {
-      allMarkdownRemark {
-        edges {
-          node {
-            excerpt 
-            frontmatter {
-                        title
-                        } 
-            html
-          }
+  const airtablecompetences = await graphql(`
+  query Mycompences {
+  allAirtable(filter: {table: {eq: "cv"}}) {
+    edges {
+      node {
+        data {
+          Name
         }
       }
     }
+  }
+}
   `)
 
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    createPage({
-      path: node.frontmatter.title,
-      component: path.resolve(`./src/templates/blog-post.js`),
+  airtablecompetences.data.allAirtable.edges.forEach(({node})=>{
+ createPage({
+      path: node.data.Name,
+      component: path.resolve(`./src/templates/competence.js`),
       context: {
         // Data passed to context is available
         // in page queries as GraphQL variables.
-        slug: node.frontmatter.title,
+        article: node.data.Name,
       },
     })
   })
 
+ 
 
     airtableprojet.data.allAirtable.edges.forEach(({node})=>{
       createPage({

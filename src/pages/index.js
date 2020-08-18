@@ -7,7 +7,7 @@ import { Reveal, Tween } from 'react-gsap';
 
 
 export default function Home({ data }) {
- 
+ console.log(data)
   return (
     <Layout>
       <div>
@@ -24,49 +24,34 @@ export default function Home({ data }) {
 <Link to="/competences?cat=Langages de programmation"  style={{padding: '1.5rem' }}>Langages de programmation</Link>
 <Link to="/competences?cat=Basses de données"  style={{margin: '1.5rem' }}>Basses de données</Link>
     
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-        <Reveal repeat>
-        <Tween from={{ opacity: 0 }} duration={2}> 
-         <div className="card text-center" style={{ margin: 20}} key={node.id}>
-            <Link
-              to={node.frontmatter.title}
-              css={css`
-                text-decoration: none;
-                color: inherit;
-              `}
-            >
-              <h3
-                css={css`
-                  margin-bottom: ${rhythm(1 / 4)};
-                `}
-              >
-                {node.frontmatter.title}
 
-              </h3>
-              <p>{node.excerpt}</p>
-            </Link>
-          </div>
-          </Tween>
-</Reveal>
-        ))}
       </div>
     </Layout>
   )
 }
 
 export const query = graphql`
-  query {
-    allMarkdownRemark {
-      edges {
-        node {
-          excerpt
-          frontmatter {
-            
-            title
-          }
-         
+ query Myhomepage {
+  comp: allAirtable(filter: {table: {eq: "cv"}}) {
+    edges {
+      node {
+        data {
+          Name
+          cats
         }
       }
     }
   }
+  projs: allAirtable(filter: {table: {eq: "projets"}}) {
+    edges {
+      node {
+        data {
+          Name
+        }
+      }
+    }
+  }
+ 
+}
+
 `
