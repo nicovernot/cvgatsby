@@ -16,13 +16,20 @@ export default function Home({ data }) {
      const dbs = comps.filter(function (node) {
       return node.node.data.cats[0]==="Basses de données";
       }) 
+      const fram = comps.filter(function (node) {
+        return node.node.data.cats[0]==="Frameworks-librairies";
+        }) 
+        const gproj = comps.filter(function (node) {
+          return node.node.data.cats[0]==="Gestion de projet";
+          })   
+
 
   return (
     <Layout>
     <br/>
 <div className="row">
   <div className="col-sm-4 h-100" >
-   <ul className="nav nav-pills flex-column vh-100" style={{position :"fixed"}}>
+   <ul className="nav nav-pills flex-column fixedul" style={{position :"fixed"}}>
         <li className="nav-item">
         <Link to='/#projs' className="nav-link" style={{margin: 10, background:"skyblue"}}>Projets</Link>
         </li>
@@ -35,6 +42,13 @@ export default function Home({ data }) {
         <li className="nav-item">
         <Link to='/#dbs' className="nav-link" style={{margin: 10, background:"wheat"}}>Basses de données</Link>
         </li>
+        <li className="nav-item">
+        <Link to='/#fram' className="nav-link" style={{margin: 10, background:"papayawhip"}}>Frameworks-librairies</Link>
+        </li>
+        <li className="nav-item">
+        <Link to='/#gproj' className="nav-link" style={{margin: 10, background:"pink"}}>Gestion de projet</Link>
+        </li>
+
       </ul>
   </div>
   <div className="col">
@@ -108,6 +122,40 @@ export default function Home({ data }) {
                                     </Tween>
                                     </Reveal>
                                         ))}
+<h3 className="card " style={{margin: 10, background:"papayawhip" ,textAlign : "center",border:"1px"}} id={'fram'}>Frameworks-librairies</h3>
+                            { fram.map((node,key) => (
+                                    <Reveal key={key}>
+                                    <Tween from={{ opacity: 0 }} duration={2}>
+                                        <div className="card" style={{margin: 10,background:"papayawhip"}}>
+                                            <Link  to={node.node.data.Name} style={{padding: '1.5rem' }}>
+                                                        <h3>{node.node.data.Name}</h3>
+                                                        <div className="card-body">
+                                                            <img src={node.node.data.Attachments[0].url} style={{width: 180}} alt={node.node.data.Name}/>
+                                                            <p className="card-text" dangerouslySetInnerHTML={{ __html: node.node.data.competances.childMarkdownRemark.excerpt }}></p>
+                                                            <h4><span className="badge badge-info">{node.node.data.cats.join(",")}</span></h4>
+                                                        </div>
+                                            </Link>            
+                                        </div>
+                                    </Tween>
+                                    </Reveal>
+                                        ))}     
+<h3 className="card " style={{margin: 10, background:"pink" ,textAlign : "center",border:"1px"}} id={'gproj'}>Gestion de projet</h3>
+                            { gproj.map((node,key) => (
+                                    <Reveal key={key}>
+                                    <Tween from={{ opacity: 0 }} duration={2}>
+                                        <div className="card" style={{margin: 10,background:"pink"}}>
+                                            <Link  to={node.node.data.Name} style={{padding: '1.5rem' }}>
+                                                        <h3>{node.node.data.Name}</h3>
+                                                        <div className="card-body">
+                                                            <img src={node.node.data.Attachments[0].url} style={{width: 180}} alt={node.node.data.Name}/>
+                                                            <p className="card-text" dangerouslySetInnerHTML={{ __html: node.node.data.competances.childMarkdownRemark.excerpt }}></p>
+                                                            <h4><span className="badge badge-info">{node.node.data.cats.join(",")}</span></h4>
+                                                        </div>
+                                            </Link>            
+                                        </div>
+                                    </Tween>
+                                    </Reveal>
+                                        ))}                                                                                
   </div>
   
 </div>

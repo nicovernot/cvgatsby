@@ -2,3 +2,7 @@ html {
     background-color: mintcream;
     scroll-behavior: smooth;
   }
+
+  .fixedul{
+    position :"fixed"
+  }
