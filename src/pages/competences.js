@@ -20,14 +20,14 @@ export default function competances({data}) {
       <Layout>
           <br/>
         
-          <div className="container-fluid">
+          
                 { filterdata.map((node,key) => (
          <div key={key} className="row">
             <Reveal >
             <Tween from={{ opacity: 0 }} duration={2}>
-                <div className="card col-md-12" style={{margin: 10}}>
-                            <h3>{key}  --{node.node.data.Name}</h3>
-                                <div className="card-body alert-info">
+                <div className="card col-md-12" style={{margin: 10,background:"powderblue"}}>
+                            <h3>{node.node.data.Name}</h3>
+                                <div className="card-body">
                                     <img src={node.node.data.Attachments[0].url} style={{width: 180}}/>
                                     <p className="card-text" dangerouslySetInnerHTML={{ __html: node.node.data.competances.childMarkdownRemark.html }}></p>
                                     <h4><span className="badge badge-info">{node.node.data.cats.join(",")}</span></h4>
@@ -38,7 +38,7 @@ export default function competances({data}) {
                     
            </div>         
                 ))}
-           </div>  
+          
       </Layout>
     );
   };

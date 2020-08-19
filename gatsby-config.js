@@ -1,7 +1,6 @@
 module.exports = {
   
   plugins: [
-    `gatsby-env-variables`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-remark-images`,
