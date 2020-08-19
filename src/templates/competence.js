@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 
 export default function Projet({ data }) {
   const post = data.airtable
-  console.log(post)
+
   return (
     <Layout>
         <br></br>

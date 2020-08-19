@@ -6,13 +6,13 @@ import { Helmet } from 'react-helmet';
 export default function Layout({ children}) {
 
   return (
-    <div className="application">
+    <div className="container">
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>Nicolas Vernot</title>
                 <script src="https://kit.fontawesome.com/1c451dcf6c.js" crossorigin="anonymous"></script>
             </Helmet>
-            <div style={{ margin: `3rem auto`, maxWidth: 650, padding: `0 1rem` }}>
+            <div style={{ margin: `3rem auto`,padding: `0 1rem` }}>
       <header style={{ marginBottom: `1.5rem` }}>
         <AniLink paintDrip color="aliceblue" to="/" style={{ textShadow: `none`, backgroundcolor: `azure` }}>
         <StaticQuery
