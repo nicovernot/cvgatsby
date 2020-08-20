@@ -23,7 +23,7 @@ module.exports = {
     {
       resolve: `gatsby-source-airtable`,
       options: {
-        apiKey: `keynivecoR8YRU3rWxqIsyK`, // may instead specify via env, see below
+        apiKey: `keyR8YRU3rWxqIsyK`, // may instead specify via env, see below
         concurrency: 5, // default, see using markdown and attachments for more information
         tables: [
           {
