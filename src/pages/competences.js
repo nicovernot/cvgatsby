@@ -2,8 +2,8 @@ import React from 'react'
 import Layout from '../components/layout';
 import { Reveal, Tween } from 'react-gsap';
 import { graphql } from "gatsby"
-const params = new URLSearchParams(document.location.search.substring(1));
-const param =params.get("cat"); 
+
+const param =""; 
 
 
 
