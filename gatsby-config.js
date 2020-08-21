@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+//console.log(process.env.AIRTABLE_KEY)
 module.exports = {
   
   plugins: [
@@ -23,7 +27,7 @@ module.exports = {
     {
       resolve: `gatsby-source-airtable`,
       options: {
-        apiKey: `keyR8YRU3rWxqIsyK`, // may instead specify via env, see below
+        apiKey: process.env.AIRTABLE_KEY, // may instead specify via env, see below
         concurrency: 5, // default, see using markdown and attachments for more information
         tables: [
           {
