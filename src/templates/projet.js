@@ -12,8 +12,7 @@ export default function Projet({ data }) {
         <br></br>
       <div>
      
-                                <Reveal>
-                                    <Tween from={{ opacity: 0 }} duration={2}> 
+  
                                         <div  className="card" style={{margin: 10, background:"skyblue"}}>
                                     
                                         <h5>{projs.data.Name}</h5>
@@ -25,8 +24,7 @@ export default function Projet({ data }) {
                                           <Link to={'/'+comp} className="nav-lik">{comp}</Link> 
                                         ))}
                                         </div>
-                                    </Tween>
-                                </Reveal>    
+
                         
   
        
