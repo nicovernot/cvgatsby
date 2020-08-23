@@ -27,9 +27,10 @@ export default function Home({ data }) {
   return (
     <Layout>
     <br/>
+   
 <div className="row">
-  <div className="col-sm-4 h-100" >
-   <ul className="nav nav-pills flex-column fixedul" style={{position :"fixed"}}>
+<div className="col">
+   <ul className="nav nav flex-column" style={{position :"fixed"}}>
         <li className="nav-item">
         <Link to='/#projs' className="nav-link" style={{margin: 10, background:"skyblue"}}>Projets</Link>
         </li>
@@ -48,10 +49,10 @@ export default function Home({ data }) {
         <li className="nav-item">
         <Link to='/#gproj' className="nav-link" style={{margin: 10, background:"pink"}}>Gestion de projet</Link>
         </li>
-
       </ul>
   </div>
-  <div className="col">
+
+  <div className="col-sm-8">
    <h3  style={{margin: 10, background:"skyblue" ,textAlign : "center",border:"1px"}} id={'projs'}>Projets</h3>
                             {projs.map((proj,key)=>(
                                 <Reveal key={key}>

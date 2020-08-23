@@ -15,7 +15,8 @@ console.log(post)
   <h1>{post.data.Name}</h1>
   <h5>{post.data.Name}</h5>
   <img src={post.data.Attachments[0].url} alt={post.data.Name} style={{margin: 10, width:300}}/>
-  <h6 dangerouslySetInnerHTML={{ __html:post.data.competances.childMarkdownRemark.html}}></h6>   
+  <h6 dangerouslySetInnerHTML={{ __html:post.data.competances.childMarkdownRemark.html}}></h6>  
+  <h4>Example heading <span class="badge badge-secondary">Projets</span></h4> 
   { post.data.projets1.map((node) =>(
     <Link to={node} style={{margin: 10}}>{node}</Link>
   ))}
