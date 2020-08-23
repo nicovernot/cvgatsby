@@ -6,7 +6,7 @@ import { Helmet } from 'react-helmet';
 export default function Layout({ children}) {
 
   return (
-    <div className="container">
+    <div >
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>Nicolas Vernot</title>
@@ -14,7 +14,8 @@ export default function Layout({ children}) {
             </Helmet>
             <div style={{ margin: `3rem auto`,padding: `0 1rem` }}>
       <header style={{ marginBottom: `1.5rem` }}>
-        <AniLink paintDrip color="aliceblue" to="/" style={{ textShadow: `none`, backgroundcolor: `azure` }}>
+         <nav className="navbar navbar-expand-sm alert-info navbar-ligth fixed-top">
+        <a paintDrip color="aliceblue" href="/" style={{ textShadow: `none`, backgroundcolor: `azure` }}>
         <StaticQuery
       query={graphql`
         query HeadingQuery {
@@ -31,11 +32,10 @@ export default function Layout({ children}) {
         </header>
       )}
     />
-        </AniLink>
+
+        </a>
         <ul style={{ listStyle: `none`, float: `right` }}>
-        <AniLink paintDrip color="powderblue" to="/competences" style={{padding: '1.5rem' }}>
-           Compétences
-        </AniLink>
+
         <AniLink paintDrip color="beige" to="/about" style={{padding: '1.5rem' }}>
            About
         </AniLink>
@@ -47,9 +47,13 @@ export default function Layout({ children}) {
         </AniLink>
           
         </ul>
+    </nav>
       </header>
-      {children}
     </div>
+      <div className="container">
+
+      {children}
+      </div>
         </div>
     
   )

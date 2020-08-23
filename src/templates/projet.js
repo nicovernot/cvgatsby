@@ -18,10 +18,10 @@ export default function Projet({ data }) {
                                         <h5>{projs.data.Name}</h5>
                                         <img src={projs.data.attachments[0].url} alt={projs.data.Name} style={{margin: 10, width:300}}/>
                                         <h6 dangerouslySetInnerHTML={{ __html:projs.data.description.childMarkdownRemark.html}}></h6>
-                                        <h5>Competances</h5>
+                                        <h5 className="badge badge-secondary">Competances</h5>
                                         <br/>
                                         {projs.data.Name__from_cv_.map((comp)=>(
-                                          <Link to={'/'+comp} className="nav-lik">{comp}</Link> 
+                                          <Link  className="badge badge-success" to={'/'+comp} className="nav-lik">{comp}</Link> 
                                         ))}
                                         </div>
 

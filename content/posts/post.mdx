@@ -1,17 +1,49 @@
 ---
-title: My last! 
+title: Strapi
 date: 2020-05-15
 image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80'
 imageAlt: Laptop on a desk with VS Code open.
 ---
 
-Wow! I love blogging so much already.
+Qu’est-ce que Strapi?
+Strapi est le Content Management Framework le plus avancé sur la technologie Node.js. À mi-chemin entre un famework Nodejs et un Headless CMS (API-first), il permet d’économiser des semaines de développement.
 
-Did you know that "despite its name, salted duck eggs can also be made from chicken eggs, though the taste and texture will be somewhat different, and the egg yolk will be less rich."? ([Wikipedia Link](https://en.wikipedia.org/wiki/Salted_duck_egg))
 
-Yeah, I didn't either.
-Below is an example of JSX embedded in Markdown. <br /> **Try and change
-the background color!**
+Grâce à son système extensible de plugin, il propose de nombreuses fonctionnalités : panel d’administration, authentification et gestion des permissions, gestion de contenu, générateur d’API, etc.
+
+Contrairement aux CMS en ligne, Strapi est 100% open-source, ce qui veut dire que :
+
+Strapi est totalement gratuit
+Vous pouvez l’héberger sur vos propres serveurs. Vous êtes donc propriétaire de votre donnée.
+Il est entièrement personnalisable et extensible, grâce au système de plugins.
+Installation de l’API
+Tout d’abord, nous allons commencer par créer une API avec Strapi et ajouter du contenu.
+
+Création du projet Strapi
+Installation de Strapi
+Prérequis: vérifiez que Node 8 (ou plus) et MongoDB sont installés et démarrés sur votre machine.
+
+Installez Strapi via npm :
+
+npm i strapi@alpha -g
+Note : Strapi v3 est encore en version alpha, mais cela ne posera aucun problème pour la réalisation de ce tutoriel.
+
+Création d’un projet Strapi
+Créez un dossier nommé gatsby-strapi-tutorial :
+
+mkdir gatsby-strapi-tutorial
+Générez l’API au sein de ce nouveau dossier :
+
+cd gatsby-strapi-tutorial
+strapi new api
+Démarrage du serveur
+Entrez à l’intérieur du projet généré :
+
+cd api
+Démarrez le serveur Node.js :
+
+strapi start
+À partir de maintenant, vous devriez être à même de voir le panel d’administration de votre projet : http://localhost:1337/admin.
 
 <div style={{ padding: '20px', backgroundColor: 'pink' }}>
   <h3>This is JSX</h3>
