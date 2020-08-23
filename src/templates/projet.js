@@ -18,11 +18,15 @@ export default function Projet({ data }) {
                                         <h5>{projs.data.Name}</h5>
                                         <img src={projs.data.attachments[0].url} alt={projs.data.Name} style={{margin: 10, width:300}}/>
                                         <h6 dangerouslySetInnerHTML={{ __html:projs.data.description.childMarkdownRemark.html}}></h6>
+                                        <h5 className="badge badge-secondary">Lien depot github</h5>
+                                        <a href={projs.data.url} className="badge badge-info">{projs.data.url}</a>
                                         <h5 className="badge badge-secondary">Competances</h5>
                                         <br/>
+                                        <ul class="nav">
                                         {projs.data.Name__from_cv_.map((comp)=>(
-                                          <Link  className="badge badge-success" to={'/'+comp} className="nav-lik">{comp}</Link> 
+                                          <Link  to={'/'+comp} className="nav-lik" style={{padding: '1.5rem' }}><p  className="badge badge-dark">{comp}</p></Link> 
                                         ))}
+                                        </ul>
                                         </div>
 
                         
@@ -38,6 +42,7 @@ export const query = graphql`
     airtable(data:{Name:{eq:$article}}){
     data{
       Name
+      url
       Name__from_cv_
       attachments {
         url
