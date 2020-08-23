@@ -7,11 +7,11 @@ export default function Contact() {
       <Layout>
   <br/>
     <div>
-      <h1>Pour me contacter cliquez sur le lien qui suit</h1>
-  
-      
-     
-    <a className="badge badge-success"
+
+      <br/>
+      <h3>Pour me contacter cliquez sur le lien qui suit</h3>
+      <div className="jumbotron alert-success">
+      <a className="badge badge-success"
       href="javascript:void(
         window.open(
           'https://form.jotform.com/202341320663342',
@@ -25,6 +25,10 @@ export default function Contact() {
     ">
      Formulaire contact
     </a>
+</div>
+      
+     
+
     </div>
       </Layout>
   )
