@@ -18,7 +18,7 @@ console.log(post)
   <h6 dangerouslySetInnerHTML={{ __html:post.data.competances.childMarkdownRemark.html}}></h6>  
   <h4><span class="badge badge-secondary">Projets</span></h4> 
   { post.data.projets1.map((node) =>(
-    <Link to={node} style={{margin: 10}}>{node}</Link>
+    <Link className="badge badge-success" to={node} style={{margin: 10}}>{node}</Link>
   ))}
       </div>
     </Layout>
