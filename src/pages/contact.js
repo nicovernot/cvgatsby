@@ -7,10 +7,24 @@ export default function Contact() {
       <Layout>
   <br/>
     <div>
-      <h1>I'd love to talk! Email me at the address below</h1>
-      <p>
-        <a href="mailto:me@example.com">me@example.com</a>
-      </p>
+      <h1>Pour me contacter cliquez sur le lien qui suit</h1>
+  
+      
+     
+    <a className="badge badge-success"
+      href="javascript:void(
+        window.open(
+          'https://form.jotform.com/202341320663342',
+          'blank',
+          'scrollbars=yes,
+          toolbar=no,
+          width=700,
+          height=500'
+        )
+      )
+    ">
+     Formulaire contact
+    </a>
     </div>
       </Layout>
   )
