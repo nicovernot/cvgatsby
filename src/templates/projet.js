@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
-import { Reveal, Tween } from 'react-gsap';
+
 
 
 export default function Projet({ data }) {
