@@ -43,7 +43,7 @@ export default function Layout({ children}) {
         
     <li className="nav-item dropdown"  className="nav-item dropdown">
       <a className="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-        Competances
+        Compétences
       </a>
       <div className="dropdown-menu">
         <Link className="dropdown-item" to="/#langs">Langages de programmation</Link>
