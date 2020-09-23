@@ -7,7 +7,7 @@ export default function BlogPost({ data }) {
   const post = data.markdownRemark
   return (
     <Layout>
-        <br></br>
+    
       <div>
 
         <h1>{post.frontmatter.title}</h1>

@@ -15,8 +15,8 @@ export default function Layout({ children}) {
             </Helmet>
             <div >
       <header style={{ marginBottom: `1.5rem` }}>
-         <nav className="navbar navbar-expand-md alert-info navbar-ligth fixed-top">
-        <a paintDrip color="aliceblue" href="/">
+         <nav className="navbar navbar-expand-md  bg-dark fixed-top navbar-dark">
+        <Link paintDrip color="aliceblue" to="/">
         <StaticQuery
       query={graphql`
         query HeadingQuery {
@@ -34,9 +34,9 @@ export default function Layout({ children}) {
       )}
     />
 
-        </a>
+        </Link>
   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    <span className="navbar-toggler-icon bg-info"></span>
+    <span className="navbar-toggler-icon"></span>
   </button>
   <div className="collapse navbar-collapse" id="collapsibleNavbar">
         <ul className="navbar-nav">
@@ -76,8 +76,11 @@ export default function Layout({ children}) {
     </nav>
       </header>
     </div>
-      <div className="container">
   <br/>
+  <br/>
+    
+        <br/>
+      <div className="container">
       {children}
       </div>
         </div>
